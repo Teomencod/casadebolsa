@@ -1,0 +1,120 @@
+/* FondoMatch - Estilos compilados */
+/* Tailwind CSS + Custom Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+  --primary: #2b59da;
+  --primary-hover: #1e4dc4;
+  --primary-light: #EFF6FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0a1e4d;
+}
+
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Transiciones */
+.transition-all {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botones */
+button {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Formularios */
+input, textarea, select {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Iconos Material */
+.material-icons,
+.material-icons-outlined {
+  font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined', sans-serif;
+}
+
+/* Animaciones */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Contenedor raíz */
+#root, [data-fondo-match-root] {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
