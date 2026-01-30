@@ -1,0 +1,17 @@
+version: 1
+type: global-js-css
+
+metadata:
+  description: "FondoMatch - Asesor de Inversiones Inteligente"
+  name: "fondo-match-app"
+  OSGI-JSP-Functions: true
+
+resources:
+  - path: "dist/index.js"
+  - path: "dist/index.css"
+
+configuration:
+  apiKey:
+    description: "Google Gemini API Key"
+    type: "password"
+    default: ""
